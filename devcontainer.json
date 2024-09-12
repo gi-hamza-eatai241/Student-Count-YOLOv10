@@ -1,0 +1,20 @@
+{
+    "name": "Student Count with YOLOv10 DeepStream Optimized",
+    "image": "nvcr.io/nvidia/deepstream-l4t:7.0-triton-multiarch",
+    "runArgs": [
+        "--runtime=nvidia",
+        "--gpus=all",
+        "-e", "DISPLAY=${env:DISPLAY}",
+        "-v", "/tmp/.X11-unix:/tmp/.X11-unix"
+    ],
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=C:\\Users\\hamza\\PycharmProjects\\Student-Count-YOLOv10,target=/workspace,type=bind,consistency=cached",
+    "remoteUser": "root",
+    "mounts": [
+        "source=C:\\Users\\hamza\\PycharmProjects\\Student-Count-YOLOv10,target=/workspace,type=bind,consistency=cached"
+    ],
+    "postCreateCommand": "apt-get update && apt-get install -y x11-apps",
+    "containerEnv": {
+        "DISPLAY": "host.docker.internal:0"
+    }
+}
