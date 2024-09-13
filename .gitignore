@@ -173,3 +173,6 @@ cython_debug/
 *.pt
 *.onnx
 *.engine
+
+# Development Files
+devcontainer.json
